@@ -7,25 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     
+    <style>
+      #banner {
+        height :360px;
+        object-fit : cover;
+        width : 100%;
+      }
+    </style>
     
   </head>
   
   <body>
-    <div>
-    <h1>Jovian Careers</h1>
-    <p> Hello, Welcome to Jovian Job Opportunities </p>
-    <img src = 'https://jovian-careers.pravz149.repl.co/static/image.jpg'height = "320" >
+    <div class= "container">
+    <h1 class = "text-center mt-2 mb-4"> {{company_name}}Careers</h1>
+    <p class = "text-center"s> Hello, Welcome to Jovian Job Opportunities </p>
+    <img class = "img-fluid" id ="banner" src = 'https://jovian-careers.pravz149.repl.co/static/image.jpg'height = "320" >
     
-    <h2>About Jovian</h2>
+    <h2 class = "text-center mt-2 mb-4">About Jovian</h2>
     
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p class="lead">The pain itself is the love of the pain, the main ecological problems, but I give this kind of time to fall down, so that some great pain and pain. For the purpose of coming to a minimum, what of ours to exercise, any school of labor except to take advantage of the consequences from it's objectives. But the pain in the film is irure to condemn, in pleasure it wants to escape from the pain of being cillum in pain, no result. They are the exceptions the blinds yearn for, they don't see, they are the ones who abandon their responsibilities to the fault that is soothing the soul's hardships.
+</p>
     
-  <h2>Open Positions</h2>
-  <p>TODO = Show the jobs</p>
-      
+  <h2 class = "text-center mt-2 mb-4">Open Positions</h2>
   <div>
-  <button>Contact Us</button>
-    <p>Copyright 2022 , Jovian</p>
+    {% for job in jobs %}
+      {% include 'jobitem.html' %}
+    {% endfor %}
+  </div>
+      
+  <div class = "text-center">
+  <button class = "btn btn-primary btn-lg">Contact Us</button>
+    <p class = "mt-4">Copyright 2022 , Jovian</p>
   </div>
 
     
